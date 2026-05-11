@@ -5,6 +5,7 @@ import errorHandler from './middleware/error.middleware.js';
 import authRoutes from './routes/auth.routes.js';
 import postRoutes from './routes/post.routes.js';
 import commentRoutes from './routes/comment.routes.js';
+import userRoutes from './routes/user.routes.js';
 
 const app = express();
 
@@ -20,6 +21,7 @@ if (process.env.NODE_ENV === 'development') {
 app.use('/api/auth', authRoutes);
 app.use('/api/posts', postRoutes);
 app.use('/api/comments', commentRoutes);
+app.use('/api/users', userRoutes);
 
 // Health check
 app.get('/api/health', (req, res) => {
