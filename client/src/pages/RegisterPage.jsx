@@ -70,9 +70,9 @@ const RegisterPage = () => {
             <span className="text-accent font-mono text-2xl font-bold">
               &gt;_
             </span>
-            <span className="text-text-primary text-2xl font-bold">DevLog</span>
+            <span className="text-primary text-2xl font-bold">DevLog</span>
           </Link>
-          <p className="text-text-muted mt-2 text-sm">
+          <p className="text-muted mt-2 text-sm">
             Create your account and start writing.
           </p>
         </div>
@@ -82,7 +82,7 @@ const RegisterPage = () => {
           <form onSubmit={handleSubmit} className="space-y-5">
             {/* Username */}
             <div>
-              <label className="block text-sm font-medium text-text-primary mb-1.5">
+              <label className="block text-sm font-medium text-primary mb-1.5">
                 Username
               </label>
               <input
@@ -92,13 +92,13 @@ const RegisterPage = () => {
                 onChange={handleChange}
                 required
                 placeholder="rishav256"
-                className="w-full bg-background border border-border rounded-md px-3 py-2.5 text-text-primary placeholder-text-muted text-sm focus:outline-none focus:border-accent transition-colors"
+                className="w-full bg-background border border-border rounded-md px-3 py-2.5 text-primary placeholder-muted text-sm focus:outline-none focus:border-accent transition-colors"
               />
             </div>
 
             {/* Email */}
             <div>
-              <label className="block text-sm font-medium text-text-primary mb-1.5">
+              <label className="block text-sm font-medium text-primary mb-1.5">
                 Email
               </label>
               <input
@@ -108,13 +108,13 @@ const RegisterPage = () => {
                 onChange={handleChange}
                 required
                 placeholder="you@example.com"
-                className="w-full bg-background border border-border rounded-md px-3 py-2.5 text-text-primary placeholder-text-muted text-sm focus:outline-none focus:border-accent transition-colors"
+                className="w-full bg-background border border-border rounded-md px-3 py-2.5 text-primary placeholder-muted text-sm focus:outline-none focus:border-accent transition-colors"
               />
             </div>
 
             {/* Password */}
             <div>
-              <label className="block text-sm font-medium text-text-primary mb-1.5">
+              <label className="block text-sm font-medium text-primary mb-1.5">
                 Password
               </label>
               <input
@@ -124,13 +124,13 @@ const RegisterPage = () => {
                 onChange={handleChange}
                 required
                 placeholder="••••••••"
-                className="w-full bg-background border border-border rounded-md px-3 py-2.5 text-text-primary placeholder-text-muted text-sm focus:outline-none focus:border-accent transition-colors"
+                className="w-full bg-background border border-border rounded-md px-3 py-2.5 text-primary placeholder-muted text-sm focus:outline-none focus:border-accent transition-colors"
               />
             </div>
 
             {/* Confirm Password */}
             <div>
-              <label className="block text-sm font-medium text-text-primary mb-1.5">
+              <label className="block text-sm font-medium text-primary mb-1.5">
                 Confirm Password
               </label>
               <input
@@ -140,7 +140,7 @@ const RegisterPage = () => {
                 onChange={handleChange}
                 required
                 placeholder="••••••••"
-                className="w-full bg-background border border-border rounded-md px-3 py-2.5 text-text-primary placeholder-text-muted text-sm focus:outline-none focus:border-accent transition-colors"
+                className="w-full bg-background border border-border rounded-md px-3 py-2.5 text-primary placeholder-muted text-sm focus:outline-none focus:border-accent transition-colors"
               />
             </div>
 
@@ -154,7 +154,7 @@ const RegisterPage = () => {
             </button>
           </form>
 
-          <p className="text-center text-text-muted text-sm mt-6">
+          <p className="text-center text-muted text-sm mt-6">
             Already have an account?{' '}
             <Link to="/login" className="text-accent hover:underline">
               Sign in
