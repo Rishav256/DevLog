@@ -2,7 +2,8 @@
 
 A full-stack developer publishing platform where engineers write, share, and discover technical content.
 
-**Live:** _coming soon_ :)
+**Live:** _coming soon_ :D
+
 **Stack:** Node.js · Express · MongoDB · React 18 · JWT · Tailwind CSS
 
 ## Features
@@ -13,10 +14,26 @@ A full-stack developer publishing platform where engineers write, share, and dis
 - Likes & comments
 - User profiles & dashboards
 
-## Project Status
+---
 
+## Project Status
 🚧 Actively in development — built in public.
 
-## Local Setup
+| Feature | Status |
+|---|---|
+| Backend API | ✅ Complete |
+| Authentication | ✅ Complete |
+| Post CRUD | ✅ Complete |
+| Comments | ✅ Complete |
+| React Frontend | 🔨 In progress |
+| Deployment | ⏳ Pending |
 
+---
+
+## Local Setup
 _coming soon_
+
+---
+Rishav256 :)
+
+
