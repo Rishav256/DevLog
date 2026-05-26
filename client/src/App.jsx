@@ -26,6 +26,8 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/post/:slug" element={<PostPage />} />
         <Route path="/profile/:username" element={<ProfilePage />} />
+        <Route path="/explore" element={<ExplorePage />} />
+        <Route path="*" element={<NotFound />} />
         <Route
           path="/dashboard"
           element={
@@ -34,10 +36,16 @@ function App() {
             </ProtectedRoute>
           }
         />
-        <Route path="*" element={<NotFound />} />
-        <Route path="/explore" element={<ExplorePage />} />
         <Route
           path="/write"
+          element={
+            <ProtectedRoute>
+              <WritePage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/edit/:id"
           element={
             <ProtectedRoute>
               <WritePage />

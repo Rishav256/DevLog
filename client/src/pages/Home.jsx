@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axiosInstance from '../api/axiosInstance';
+import useAuth from '../hooks/useAuth';
 
 const Home = () => {
+  const { user } = useAuth();
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
@@ -55,7 +57,7 @@ const Home = () => {
           </p>
           <div className="flex items-center justify-center gap-4">
             <Link
-              to="/register"
+              to={user ? '/write' : '/register'}
               style={{ backgroundColor: '#10b981', color: 'white' }}
               onMouseEnter={(e) =>
                 (e.currentTarget.style.backgroundColor = '#059669')
