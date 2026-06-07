@@ -3,6 +3,7 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
 import axiosInstance from '../api/axiosInstance';
 import useAuth from '../hooks/useAuth';
+import { formatDate } from '../utils/formatDate';
 
 const PostPage = () => {
   const { slug } = useParams();
@@ -91,14 +92,6 @@ const PostPage = () => {
     } catch (error) {
       toast.error('Failed to delete comment');
     }
-  };
-
-  const formatDate = (dateStr) => {
-    return new Date(dateStr).toLocaleDateString('en-US', {
-      month: 'long',
-      day: 'numeric',
-      year: 'numeric',
-    });
   };
 
   if (loading) {

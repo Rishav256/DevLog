@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
 import axiosInstance from '../api/axiosInstance';
 import useAuth from '../hooks/useAuth';
+import { formatDate } from '../utils/formatDate';
 
 const Dashboard = () => {
   const { user } = useAuth();
@@ -35,14 +36,6 @@ const Dashboard = () => {
     } catch (error) {
       toast.error('Failed to delete post');
     }
-  };
-
-  const formatDate = (dateStr) => {
-    return new Date(dateStr).toLocaleDateString('en-US', {
-      month: 'short',
-      day: 'numeric',
-      year: 'numeric',
-    });
   };
 
   return (

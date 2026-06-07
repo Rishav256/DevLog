@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axiosInstance from '../api/axiosInstance';
 import useAuth from '../hooks/useAuth';
+import { formatDate } from '../utils/formatDate';
 
 const Home = () => {
   const { user } = useAuth();
@@ -188,14 +189,6 @@ const Home = () => {
 };
 
 const PostCard = ({ post }) => {
-  const formatDate = (dateStr) => {
-    return new Date(dateStr).toLocaleDateString('en-US', {
-      month: 'short',
-      day: 'numeric',
-      year: 'numeric',
-    });
-  };
-
   return (
     <Link to={`/post/${post.slug}`}>
       <div

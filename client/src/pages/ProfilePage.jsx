@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axiosInstance from '../api/axiosInstance';
 import useAuth from '../hooks/useAuth';
+import { formatDate } from '../utils/formatDate';
 
 const ProfilePage = () => {
   const { username } = useParams();
@@ -23,13 +24,6 @@ const ProfilePage = () => {
     } finally {
       setLoading(false);
     }
-  };
-
-  const formatDate = (dateStr) => {
-    return new Date(dateStr).toLocaleDateString('en-US', {
-      month: 'long',
-      year: 'numeric',
-    });
   };
 
   if (loading) {

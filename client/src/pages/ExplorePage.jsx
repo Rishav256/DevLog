@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axiosInstance from '../api/axiosInstance';
+import { formatDate } from '../utils/formatDate';
 
 const ExplorePage = () => {
   const [posts, setPosts] = useState([]);
@@ -53,15 +54,6 @@ const ExplorePage = () => {
     'devops',
     'typescript',
   ];
-
-  const formatDate = (dateStr) => {
-    return new Date(dateStr).toLocaleDateString('en-US', {
-      month: 'short',
-      day: 'numeric',
-      year: 'numeric',
-    });
-  };
-
   return (
     <div style={{ backgroundColor: '#0d1117', minHeight: '100vh' }}>
       <div className="max-w-6xl mx-auto px-6 py-12">
